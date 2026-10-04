@@ -2,5 +2,5 @@
 const PUBLIC_SITE_URL="https://script.google.com/macros/s/AKfycbwI7fXTh8UUJ8scfNaYMhzlJSuJNQ2K4TFQpMuR2pWEVOGSzzN8SvZgEsSrDM-pFI026A/exec";
 function openPlayer(){if(document.querySelector('iframe'))return;const frame=document.createElement('iframe');frame.title='Duck Side Of The Moon — site public';frame.allow='autoplay *; fullscreen *';frame.src=PUBLIC_SITE_URL;document.getElementById('welcome').remove();document.getElementById('help').hidden=false;document.body.appendChild(frame);}
 document.getElementById('start').onclick=openPlayer;
-const appleMobile=/iPhone|iPad|iPod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);if(!appleMobile){openPlayer();document.getElementById('help').hidden=true;}
+openPlayer();
 </script></body></html>
